@@ -1,0 +1,16 @@
+<h2>Pet Details</h2>
+
+<div *ngIf="pet">
+    <div class="card" style="width: 100%;">
+        <img src="/assets/pictures/{{ pet.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ pet.name }}</h5>
+            <p class="card-text">Age: <b>{{ pet.age }}</b> years</p>
+            <p class="card-text">Gender: <b>{{ pet.gender }}</b></p>
+            <p class="card-text">Size: <b>{{ pet.size }}</b></p>
+            <p class="card-text">Vaccine: <b>{{ pet.vaccine }}</b></p>
+            <h5>€ {{ pet.price }}</h5>
+            <a (click)="addToCart()" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</div>

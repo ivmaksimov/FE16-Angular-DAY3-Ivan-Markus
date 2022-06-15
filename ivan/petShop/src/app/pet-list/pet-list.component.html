@@ -1,0 +1,13 @@
+<h2>Available Pets</h2>
+<div class="main">
+    <div *ngFor="let pet of pets ; index as petId" style="width: 30%;" >
+        <div class="card" style="width: 100%;">
+            <img src="/assets/pictures/{{ pet.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ pet.name }}</h5>
+                <p class="card-text">Age: <b>{{ pet.age }}</b> years</p>
+                <a routerLink="pets/{{ petId }}" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+</div>
